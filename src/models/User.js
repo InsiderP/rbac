@@ -61,7 +61,7 @@ userSchema.methods.comparePassword = async function(candidatePassword) {
   return bcrypt.compare(candidatePassword, this.password);
 };
 
-// Method to generate JWT token
+
 userSchema.methods.generateToken = function() {
   const payload = {
     userId: this._id.toString(),
